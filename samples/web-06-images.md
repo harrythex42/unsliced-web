@@ -1,0 +1,17 @@
+# 四周来访趋势
+
+下图是模拟数据的缩略图，展示四周的到访量。图是内嵌 PNG，不会向外部网站请求。
+
+![四色背景的蓝绿柱状图](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAA3AgMAAACjo0obAAAADFBMVEXt9fQsgnwhWmGRvbl+PQOXAAAAT0lEQVR42mNgGHSggZACJiIMoacaFjxyXAsYGBi+JQw6N49kNSwYEcQQNujSTygDAwPD7w2DOwzRHDmaxkbVEFmGMzIwrMKv4loDwyjACwDAJgpaNQySfgAAAABJRU5ErkJggg==)
+
+图一：第四周的访问量最高，第三周略少于第二周。
+
+## 阅读提示
+
+图的颜色仅用于区分相邻柱。实际对照时还应查看站点的开放时段。
+
+![复核用的第二张内嵌柱状图](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAA3AgMAAACjo0obAAAADFBMVEXt9fQsgnwhWmGRvbl+PQOXAAAAT0lEQVR42mNgGHSggZACJiIMoacaFjxyXAsYGBi+JQw6N49kNSwYEcQQNujSTygDAwPD7w2DOwzRHDmaxkbVEFmGMzIwrMKv4loDwyjACwDAJgpaNQySfgAAAABJRU5ErkJggg==)
+
+图二：同一张图再次嵌入，用于检查多张图是否都能打印。
+
+页尾搜索词：图表成功显示。
