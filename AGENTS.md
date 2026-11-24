@@ -1,6 +1,6 @@
 # 项目说明：Unsliced 网页版
 
-本项目把 Markdown 在浏览器内排成真正可搜索、可复制的 PDF。只支持 Markdown；不上传、不统计、不保存历史。推荐 Chrome 或 Edge。分页源码只在 [Unsliced 主项目](https://github.com/harrythex42/Unsliced) 维护，这里只选择一个固定提交。保留 BreakFlow 的 MIT 声明和字体 OFL 许可证。
+本项目把 Markdown 在浏览器内排成真正可搜索、可复制的 PDF。只支持 Markdown；不上传、不统计、不保存历史。推荐 Chrome 或 Edge。分页源码只在 [Unsliced 核心仓库](https://github.com/harrythex42/Unsliced) 维护，这里只选用固定版本的公开构建产物。保留 BreakFlow 的 MIT 声明和字体 OFL 许可证。
 
 ## 关于我（项目负责人）
 

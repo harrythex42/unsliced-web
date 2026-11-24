@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "pnpm@12.3.4",
   "imports": {
-    "#upstream/*": "./.upstream/source/*"
+    "#upstream/*": "./.upstream/artifacts/*"
   },
   "scripts": {
     "build": "node upstream.mjs && node build.mjs",

@@ -1,6 +1,6 @@
 # 网页版开发与发布
 
-网页版只维护浏览器界面。分页程序、MCP 的 Markdown 处理方式和中文字体都来自 [Unsliced 主项目](https://github.com/harrythex42/Unsliced)。`upstream.json` 记录了使用的主项目完整提交号。构建会到 GitHub 下载这个版本，放进本项目忽略的 `.upstream/`；不需要本机有主项目，也不会随着主项目发布自动更新。网站访客不需要连接主项目来排版。
+网页版只维护浏览器界面。分页源码在 [Unsliced 核心仓库](https://github.com/harrythex42/Unsliced)。构建从公开的 [unsliced-mcp 仓库](https://github.com/harrythex42/unsliced-mcp) 取指定提交中的分页产物、字体和 Markdown 处理代码，并核对产物的核心版本及文件内容。`upstream.json` 记录两个完整提交号。构建无需访问核心源码仓库，也不会随着其他项目推送自动升级；访客仍然只从本站下载文件。
 
 ## 独立构建和验收
 
@@ -18,8 +18,8 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 ## 主项目升级分页后，网页版怎么跟上
 
-1. 在主项目先完成验收并推送，选定要采用的完整提交号。
-2. 在本项目修改 `upstream.json`，把提交号换成选定版本。重新构建会下载该版本，不需复制或修改分页源码。
+1. 在核心仓库选好已验收的提交。按 [MCP 的开发说明](https://github.com/harrythex42/unsliced-mcp/blob/main/docs/development.md#更新分页程序) 导出并提交该版本的公开构建产物。不必发布新的 npm 版本。
+2. 在本项目修改 `upstream.json`：`artifactCommit` 填公开产物的提交号，`coreCommit` 填对应的核心提交号。重新构建会下载并核对该版本，不需修改分页源码。
 3. 跑本项目的 `pnpm acceptance`；看差异报告和逐页图片，必要时用 Chrome 手动打印。确认无误后，单独提交并推送到 `main`。只有这一步会部署新版本。
 
 ## 上线后

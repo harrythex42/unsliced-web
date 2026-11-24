@@ -4,9 +4,9 @@ import { mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises';
 import { join, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from './upstream-browser.mjs';
-import { prepareDocument } from '#upstream/packages/mcp/document.mjs';
-import { sourceSections } from '#upstream/packages/mcp/page-checks.mjs';
-import { DEFAULT_OPTIMAL_OPTIONS } from '#upstream/packages/playwright/dist/index.js';
+import { prepareDocument } from '#upstream/document.mjs';
+import { sourceSections } from '#upstream/page-checks.mjs';
+import { DEFAULT_OPTIMAL_OPTIONS } from '#upstream/engine/runtime/index.mjs';
 import { captureTables, inspectTables } from './check-table-fragments.mjs';
 
 const site = 'https://harrythex42.github.io/unsliced-web/';

@@ -5,9 +5,9 @@ import { mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises';
 import { dirname, extname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from './scripts/upstream-browser.mjs';
-import { prepareDocument } from '#upstream/packages/mcp/document.mjs';
-import { boxOverflow, sourceSections } from '#upstream/packages/mcp/page-checks.mjs';
-import { generatePdf, DEFAULT_OPTIMAL_OPTIONS } from '#upstream/packages/playwright/dist/index.js';
+import { prepareDocument } from '#upstream/document.mjs';
+import { boxOverflow, sourceSections } from '#upstream/page-checks.mjs';
+import { generatePdf, DEFAULT_OPTIMAL_OPTIONS } from '#upstream/engine/runtime/index.mjs';
 import { captureTables, inspectTables } from './scripts/check-table-fragments.mjs';
 import { writeReports } from './reports.mjs';
 
