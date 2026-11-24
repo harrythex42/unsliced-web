@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+  --ink: #18283e;
+  --muted: #49617b;
+  --blue: #274f83;
+  --edge: #d3deec;
+  --paper: #fff;
+  --desk: #e6edf7;
+}
+html, body { margin: 0; padding: 0; }
+.topbar, .intro, .editor-panel, .preview-top, #empty, footer { font: 16px/1.5 system-ui, sans-serif; color: var(--ink); }
+.topbar { background: var(--paper); border-bottom: 1px solid var(--edge); }
+.topbar-inner, .app-shell { max-width: 1380px; margin: 0 auto; padding-inline: 24px; }
+.topbar-inner, .panel-top, .preview-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topbar-inner { min-height: 62px; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 750; }
+.brand-mark { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 7px; color: white; background: var(--blue); font-size: 18px; }
+.language { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; }
+button, select { font: inherit; color: inherit; }
+select, .secondary { border: 1px solid var(--edge); background: white; border-radius: 8px; padding: 6px 10px; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+.intro { padding-block: 24px 18px; }
+.intro h1 { margin: 0 0 4px; font-size: clamp(24px, 4vw, 34px); line-height: 1.2; letter-spacing: -.02em; }
+.intro p { margin: 0; color: var(--muted); }
+.intro .browser-note { margin-top: 12px; border: 1px solid #bfd1e8; border-radius: 8px; padding: 8px 12px; background: #eaf2fd; }
+.workspace { display: grid; grid-template-columns: minmax(285px, 360px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.editor-panel, .preview-panel { background: white; border: 1px solid var(--edge); border-radius: 12px; min-width: 0; }
+.editor-panel { padding: 16px; }
+.panel-top h2, .preview-top h2 { margin: 0; font-size: 16px; }
+.secondary { font-size: 14px; color: var(--blue); font-weight: 600; }
+#markdown {
+  box-sizing: border-box; display: block; width: 100%; margin-top: 12px; min-height: 218px;
+  padding: 12px; border: 1px solid #bfcfe2; border-radius: 8px; color: var(--ink); background: #f8faff;
+  resize: vertical; font: 14px/1.55 ui-monospace, monospace;
+}
+:is(button, select, textarea, a):focus-visible { outline: 2px solid #3a66a0; outline-offset: 2px; }
+.hint, .print-card p, .privacy, footer, #status { color: var(--muted); font-size: 14px; }
+.hint, .privacy { margin: 10px 0 0; }
+.print-card { border-top: 1px solid var(--edge); margin-top: 14px; padding-top: 14px; }
+.print-card p { margin: 8px 0 0; }
+.primary { border: 0; border-radius: 8px; padding: 9px 15px; color: white; background: var(--blue); font-weight: 650; }
+.primary:disabled { background: #e3e9f2; color: #53657b; }
+.preview-top { min-height: 51px; padding: 0 14px; flex-wrap: wrap; }
+#status { margin: 8px 0; overflow-wrap: anywhere; }
+#status[data-kind="error"] { color: #9a3024; }
+#preview-viewport { box-sizing: border-box; padding: 16px; background: var(--desk); border-radius: 0 0 11px 11px; min-width: 0; overflow: auto; }
+#empty { display: grid; min-height: 300px; place-items: center; text-align: center; color: var(--muted); border: 1px dashed #a8bbd3; border-radius: 8px; }
+[hidden], #empty[hidden] { display: none !important; }
+footer { padding: 16px 0; }
+footer a { color: var(--blue); }
+#measure { position: fixed; left: -10000px; top: 0; width: 210mm; opacity: 0; pointer-events: none; }
+
+@media screen {
+  body { background: #f2f6fc; }
+  :where(body, body *) { font-variant-ligatures: none !important; }
+  #preview > .breakflow-paginated-root { width: 210mm; margin-inline: auto; zoom: var(--preview-scale, 1); }
+  #preview .breakflow-page { box-shadow: 0 2px 7px #31445e20; }
+  #preview .breakflow-page + .breakflow-page { margin-top: 20px; }
+}
+@media screen and (max-width: 740px) {
+  .topbar-inner, .app-shell { padding-inline: 12px; }
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .intro { padding-block: 16px; }
+  #preview-viewport { padding: 8px; }
+  #markdown { height: 225px; }
+}
+@page { size: A4; margin: 0; }
+@media print {
+  .app-only, #measure { display: none !important; }
+  .app-shell, .workspace, .preview-panel, #preview-viewport, #preview {
+    display: block; min-height: 0; max-width: none; margin: 0; padding: 0;
+    border: 0; border-radius: 0; background: none; overflow: visible;
+    font: inherit; color: inherit;
+  }
+}
