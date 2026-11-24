@@ -1,5 +1,7 @@
 # Unsliced 网页版
 
+**Unsliced 家族 / Unsliced family:** [Core](https://github.com/harrythex42/unsliced-core) · [MCP](https://github.com/harrythex42/unsliced-mcp) · [Web](https://github.com/harrythex42/unsliced-web)
+
 **[打开 Unsliced 网页版](https://harrythex42.github.io/unsliced-web/) · [English](README.md)**
 
 ![Unsliced 网页版，左边是编辑框，右边是 A4 预览](docs/images/unsliced-web-zh.png)
@@ -22,6 +24,6 @@
 
 ## 项目链接
 
-分页程序和 MCP 版都在 [Unsliced 主项目](https://github.com/harrythex42/Unsliced)。本地构建、验收和升级固定分页版本的方法，见[开发说明](docs/development.md)。
+网页版直接取 [Unsliced Core](https://github.com/harrythex42/unsliced-core) 发布的固定版本分页包并校验，不依赖 MCP 版。本地构建、验收和升级方法见[开发说明](docs/development.md)。
 
 [MIT 许可证和 BreakFlow 版权声明](LICENSE) · [字体许可证（OFL）](OFL.txt)

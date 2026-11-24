@@ -1,5 +1,5 @@
 import { Marked } from 'marked';
-import { prepareDocument } from '#upstream/document.mjs';
+import { prepareDocument } from './document.mjs';
 import { examples } from './examples.mjs';
 
 const words = {

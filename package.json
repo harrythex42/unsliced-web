@@ -4,12 +4,18 @@
   "type": "module",
   "packageManager": "pnpm@12.3.4",
   "imports": {
-    "#upstream/*": "./.upstream/artifacts/*"
+    "#upstream/*": "./.upstream/core/*"
   },
   "scripts": {
     "build": "node upstream.mjs && node build.mjs",
     "acceptance": "pnpm build && node acceptance.mjs",
-    "browser:install": "node upstream.mjs --browser",
-    "test:live": "node scripts/check-web-live.mjs"
+    "browser:install": "playwright install chromium",
+    "test:live": "node upstream.mjs && node scripts/check-web-live.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.7",
+    "marked": "16.4.2",
+    "playwright": "1.63.0",
+    "sanitize-html": "2.18.2"
   }
 }

@@ -10,7 +10,7 @@ import fontTools
 from fontTools import subset
 from fontTools.ttLib import TTFont
 
-ROOT = Path(__file__).resolve().parent / ".upstream/artifacts"
+ROOT = Path(__file__).resolve().parent / ".upstream/core"
 FONT = ROOT / "engine/assets/fonts/UnslicedSansSC.ttf"
 # Match the CJK coverage used for the original font in MCP, leaving Latin alone.
 RANGES = [(0x2E80, 0x2FFF), (0x3000, 0x303F), (0x31C0, 0x31EF),

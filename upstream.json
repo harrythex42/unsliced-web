@@ -1,4 +1,5 @@
 {
-  "artifactCommit": "871d6f62b992505e41ad8c5fdb0e7ab75e5eb631",
-  "coreCommit": "1743824d3c22c3b8b8bbd267435fec9f007b1e3e"
+  "tag": "core-v0.1.2",
+  "commit": "14e668b8861df88d2803f489e53b6e3729de700b",
+  "sha256": "e44196dec800875d97af8231b7882c3464fdc603686c8555dde4012753a32bbf"
 }

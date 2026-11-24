@@ -1,5 +1,7 @@
 # Unsliced Web
 
+**Unsliced 家族 / Unsliced family:** [Core](https://github.com/harrythex42/unsliced-core) · [MCP](https://github.com/harrythex42/unsliced-mcp) · [Web](https://github.com/harrythex42/unsliced-web)
+
 **[Open Unsliced Web](https://harrythex42.github.io/unsliced-web/) · [简体中文](README.zh-CN.md)**
 
 ![Unsliced Web showing the editor and an A4 preview side by side](docs/images/unsliced-web-en.png)
@@ -22,6 +24,6 @@ Your draft is processed on your device. It is not uploaded, tracked, or saved by
 
 ## Project links
 
-The pagination engine and the MCP tool live in [the main Unsliced project](https://github.com/harrythex42/Unsliced). For local builds, acceptance checks, and the steps to upgrade the fixed engine version, see [Development](docs/development.md).
+This site takes a fixed, verified pagination package directly from [Unsliced Core](https://github.com/harrythex42/unsliced-core). It does not depend on the MCP project. For local builds, acceptance checks, and upgrades, see [Development](docs/development.md).
 
 [MIT license and BreakFlow copyright](LICENSE) · [Font license (OFL)](OFL.txt)
