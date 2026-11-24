@@ -1,0 +1,4 @@
+pypdf==6.21.4
+PyMuPDF==1.27.2.2
+fonttools==4.66.1
+brotli==1.2.1

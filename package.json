@@ -1,0 +1,15 @@
+{
+  "name": "unsliced-web",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.3.4",
+  "imports": {
+    "#upstream/*": "./.upstream/source/*"
+  },
+  "scripts": {
+    "build": "node upstream.mjs && node build.mjs",
+    "acceptance": "pnpm build && node acceptance.mjs",
+    "browser:install": "node upstream.mjs --browser",
+    "test:live": "node scripts/check-web-live.mjs"
+  }
+}

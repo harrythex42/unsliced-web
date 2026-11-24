@@ -1,1 +1,7 @@
 .venv/
+.upstream/
+node_modules/
+dist/
+output/
+__pycache__/
+.DS_Store

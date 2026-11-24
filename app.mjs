@@ -1,5 +1,5 @@
 import { Marked } from 'marked';
-import { prepareDocument } from '../../packages/mcp/document.mjs';
+import { prepareDocument } from '#upstream/packages/mcp/document.mjs';
 import { examples } from './examples.mjs';
 
 const words = {

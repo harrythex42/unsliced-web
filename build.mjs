@@ -5,10 +5,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const root = join(here, '../..');
+const root = join(here, '.upstream/source');
 const dist = join(here, 'dist');
 const python = process.env.UNSLICED_PYTHON || 'python3';
-const require = createRequire(import.meta.url);
+const require = createRequire(join(root, 'package.json'));
 const { build } = createRequire(require.resolve('tsup'))('esbuild');
 const mcpRequire = createRequire(join(root, 'packages/mcp/document.mjs'));
 await mkdir(dist, { recursive: true });
@@ -29,4 +29,4 @@ await writeFile(join(dist, 'breakflow.js'),
   '/*! BreakFlow and Unsliced contributors — MIT; see ./LICENSE. */\n' +
   engine.replace(/\r?\n\/\/# sourceMappingURL=[^\r\n]+/u, ''));
 await writeFile(join(dist, '.nojekyll'), '');
-console.log('网页版静态文件：apps/web/dist/');
+console.log('网页版静态文件：dist/');
